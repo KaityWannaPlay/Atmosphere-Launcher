@@ -1,4 +1,5 @@
-<H1 align="center">Pojav Glow·Worm</H1>
+<H1 align="center">Pojav BlueSky</H1>
+<p>just trolling around yk</p>
 
 <img src="https://github.com/PojavLauncherTeam/PojavLauncher/blob/v3_openjdk/app_pojavlauncher/src/main/assets/pojavlauncher.png" align="left" width="130" height="150" alt="PojavLauncher logo">
 
