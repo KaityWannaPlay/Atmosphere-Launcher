@@ -68,7 +68,7 @@ def getVersionName = {
 }
 
 def getBaseVersionCode = {
-    def isofficial = System.getenv('IS_OFFICIAL') == 'true'
+    def isofficial = System.getenv('IS_OFFICIAL') == 'true' namespace
     def baseVersionCode = 100000000
     if (isofficial) {
         return (baseVersionCode + Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER"))).toString()
@@ -192,7 +192,7 @@ android {
             }
         }
         def beseVersionName = getDate().toString()
-        def baseName = "Pojav-Glow-Worm-${variant.buildType.name == 'release' ? beseVersionName : "Debug-${beseVersionName}"}"
+        def baseName = "BlueSky-Launcher${variant.buildType.name == 'release' ? beseVersionName : "Debug-${beseVersionName}"}"
         outputFileName = "${baseName}-${abi}.apk"
         }
     }
