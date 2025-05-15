@@ -68,11 +68,7 @@ def getVersionName = {
 }
 
 def getBaseVersionCode = {
-    def isofficial = System.getenv('IS_OFFICIAL') == 'true' namespace
     def baseVersionCode = 100000000
-    if (isofficial) {
-        return (baseVersionCode + Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER"))).toString()
-    } else {
         def baseVersionCodeFile = new File("./base_version_code.txt")
         if (baseVersionCodeFile.canRead() && baseVersionCodeFile.isFile()) {
             def fileContent = baseVersionCodeFile.text.trim()
