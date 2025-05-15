@@ -1,30 +1,16 @@
-<H1 align="center">Pojav BlueSky</H1>
-<p>just trolling around yk</p>
-
-<img src="https://github.com/PojavLauncherTeam/PojavLauncher/blob/v3_openjdk/app_pojavlauncher/src/main/assets/pojavlauncher.png" align="left" width="130" height="150" alt="PojavLauncher logo">
+<H1 align="center">BlueSky</H1>
 
 [![Android CI](https://github.com/Vera-Firefly/Pojav-Glow-Worm/actions/workflows/main.yml/badge.svg)](https://github.com/Vera-Firefly/Pojav-Glow-Worm/actions)
 ![Downloads](https://img.shields.io/github/downloads/Vera-Firefly/Pojav-Glow-Worm/total)
-
-* <a href="/README-ZH_CN.md">中文</a>
 
 * From [Boardwalk](https://github.com/zhuowei/Boardwalk)'s ashes here comes PojavLauncher!
 
 * PojavLauncher is a launcher that allows you to play Minecraft: Java Edition on your Android device!
 
 * It can run almost every version of Minecraft, allowing you to use .jar only installers to install modloaders such as [Forge](https://files.minecraftforge.net/) and [Fabric](http://fabricmc.net/), mods like [OptiFine](https://optifine.net) and [LabyMod](https://www.labymod.net/en), as well as hack clients like [Wurst](https://www.wurstclient.net/), and much more!
-## Some notes to start with
-- I only post videos on the [BiliBili](https://space.bilibili.com/1412062866?spm_id_from=333.1007.0.0) platform, all other places are transported
-
-- This repository was forked on [PojavLauncherTeam:PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
-
-- This app adds more renderers and experimental settings
-
-- This is not the official version, it's just a modified,If you don't want to use it, please go to the [PojavLauncherTeam:PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
 
 ## Navigation
 - [Introduction](#introduction)  
-- [Getting Pojav Glow·Worm](#getting-pojav-glow-worm)
 - [Building](#building) 
 - [Current status](#current-status) 
 - [License](#license) 
@@ -94,24 +80,12 @@ cd ../
 (If you are having trouble with `mv` permissions, try using `sudo mv`)
 
 ## Current status
-- [x] ~~OpenJDK 9 Mobile port: ARM32, ARM64, x86, x86_64.~~ Replaced by JRE8.
-- [x] [OpenJDK 8](https://github.com/openjdk/jdk8u) Mobile port: ARM32, ARM64, x86, x86_64
-- [x] [OpenJDK 11](https://github.com/openjdk/jdk11u) Mobile port: ARM32, ARM64, x86, x86_64
-- [x] [OpenJDK 17](https://github.com/openjdk/jdk17u) Mobile port: ARM32, ARM64, x86, x86_64
-- [x] [OpenJDK 21](https://github.com/openjdk/jdk21u) Mobile port: ARM32, ARM64, x86, x86_64
-- [x] [Caciocavallo](https://openjdk.java.net/projects/caciocavallo/)
-- [x] [Caciocavallo11](https://github.com/FCL-Team/caciocavallo11-FCL)
-- [x] Headless mod installer
-- [x] Mod installer with GUI. Used `Caciocavallo` project for AWT without X11.
-- [x] OpenGL in OpenJDK environment
-- [x] OpenAL (works on most devices)
-- [x] Support for Minecraft 1.12.2 and below. Used [lwjglx](https://github.com/PojavLauncherTeam/lwjglx), a LWJGL2 compatibility layer for LWJGL3.
-- [x] Support for Minecraft 1.13 and above. Used [GLFW stub](https://github.com/PojavLauncherTeam/lwjgl3-glfw-java).
-- [x] Support for Minecraft 1.17 (22w13a to be exact) and above. Used [Holy GL4ES](https://github.com/PojavLauncherTeam/gl4es-114-extra)
-- [x] Game surface zooming.
-- [x] New input pipe rewritten to native code to boost performance.
-- [x] Rewritten entire controls system (thanks to @Mathias-Boulay)
-- [x] Virtual terminal system
+
+- [ ] branding and other name related stuff (partly done now)
+- [ ] revamp the ui
+- [ ] better default renders
+- [ ] alternative turnip selution for non adrenos
+- [ ] Better java args by Default
 - [ ] More to come!
 
 ## Known Issues
@@ -130,6 +104,7 @@ Contributions are welcome! We welcome any type of contribution, not only code. F
 Any code change to this repository should be submitted as a pull request. The description should explain what the code does and give steps to execute it.
 
 ## Credits & Third party components and their licenses (if available)
+- [Pojav-Glow-Worm](https://github.com/Vera-Firefly/Pojav-Glow-Worm) (for creating source base): [GNU General Public License v3.0](https://github.com/Vera-Firefly/Pojav-Glow-Worm/blob/main/LICENSE)
 - [Boardwalk](https://github.com/zhuowei/Boardwalk) (JVM Launcher): Unknown License/[Apache License 2.0](https://github.com/zhuowei/Boardwalk/blob/master/LICENSE) or GNU GPLv2.
 - Android Support Libraries: [Apache License 2.0](https://android.googlesource.com/platform/prebuilts/maven_repo/android/+/master/NOTICE.txt).
 - [GL4ES](https://github.com/PojavLauncherTeam/gl4es): [MIT License](https://github.com/ptitSeb/gl4es/blob/master/LICENSE).<br>
