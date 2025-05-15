@@ -57,7 +57,6 @@ jobs:
           name: lwjgl
 
       - name: Build Release ${{matrix.arch}} .apk
-        if: github.repository_owner == 'Vera-Firefly' && github.ref_name == 'main_v3'
         run: |
           chmod +x gradlew
           ./gradlew app_pojavlauncher:assemblerelease -Darch=${{matrix.arch}}
