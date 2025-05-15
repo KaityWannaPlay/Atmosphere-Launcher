@@ -106,6 +106,8 @@ android {
             keyAlias = "key0"
             keyPassword = "test1234"
         }
+	}
+	
         customDebug {
             storeFile file("debug.keystore")
             storePassword "android"
