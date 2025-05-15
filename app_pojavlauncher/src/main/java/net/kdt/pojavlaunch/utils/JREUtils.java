@@ -833,9 +833,9 @@ public class JREUtils {
                 case "gallium_panfrost":
                     renderLibrary = "libOSMesa_2300d.so";
                     break;
-                case "opengles3_angle":
-                    renderLibrary = "libAngle.so";
-                    break;
+           //     case "opengles3_angle":
+           //         renderLibrary = "libAngle.so";
+          //          break;
                 case "opengles3_ltw":
                     renderLibrary = "libltw.so";
                     break;
