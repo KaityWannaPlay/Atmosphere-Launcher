@@ -265,8 +265,7 @@ public class JREUtils {
     private static void setRendererEnv(Map<String, String> envMap) {
         String eglName = null;
 
-        if (LOCAL_RENDERER.startsWith("opengles2"))
-        {
+        if (LOCAL_RENDERER.startsWith("opengles2")) {
             envMap.put("LIBGL_ES", "2");
             envMap.put("LIBGL_MIPMAP", "3");
             envMap.put("LIBGL_NOERROR", "1");
@@ -282,9 +281,9 @@ public class JREUtils {
         if (LOCAL_RENDERER.equals("opengles3_angle")) {
             envMap.put("LIBGL_ES", "3");
             envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
-        {
-        if (LOCAL_RENDERER.equals("opengles3_mges"))
-        {
+        }
+			
+        if (LOCAL_RENDERER.equals("opengles3_mges")) {
             envMap.put("MG_DIR_PATH", Tools.DIR_CACHE.getAbsolutePath());
             envMap.put("MG_maxGlslCacheSize", MG_GLSL_CACHE_SIZE);
             envMap.put("MG_enableANGLE", MG_ANGLE_OPTION);
