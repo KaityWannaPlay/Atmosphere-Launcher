@@ -101,13 +101,12 @@ android {
 
     signingConfigs {
         releaseBuild {
-            storeFile = file("release.jks"
-            storePassword = "test1234"
-            keyAlias = "key0"
-            keyPassword = "test1234"
+            def pwd = System.getenv("VERA_KEYSTORE_PASSWORD")
+            storeFile file("release.jks")
+            storePassword "test1234"
+            keyAlias "key0"
+            keyPassword "test1234"
         }
-	}
-	
         customDebug {
             storeFile file("debug.keystore")
             storePassword "android"
