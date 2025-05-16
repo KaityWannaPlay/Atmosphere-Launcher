@@ -273,16 +273,6 @@ public class JREUtils {
             envMap.put("LIBGL_NORMALIZE", "1");
         }
 
-        if (LOCAL_RENDERER.equals("opengles3_ltw")) {
-            envMap.put("LIBGL_ES", "3");
-            envMap.put("POJAVEXEC_EGL", "libltw.so");
-        }
-
-        if (LOCAL_RENDERER.equals("opengles3_angle")) {
-            envMap.put("LIBGL_ES", "3");
-            envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
-        }
-			
         if (LOCAL_RENDERER.equals("opengles3_mges")) {
             envMap.put("MG_DIR_PATH", Tools.DIR_CACHE.getAbsolutePath());
             envMap.put("MG_maxGlslCacheSize", MG_GLSL_CACHE_SIZE);
@@ -291,8 +281,18 @@ public class JREUtils {
             envMap.put("MG_multidrawMode", MG_MULTIDRAWMODE_OPTION);
             envMap.put("MG_enableExtGL43", MG_EXT_GL43);
             envMap.put("MG_enableExtComputeShader", MG_EXT_CS);
+	}
+
+        if (LOCAL_RENDERER.equals("opengles3_ltw")) {
+            envMap.put("LIBGL_ES", "3");
+            envMap.put("POJAVEXEC_EGL", "libltw.so");
         }
 
+     //   if (LOCAL_RENDERER.equals("opengles3_angle")) {
+     //       envMap.put("LIBGL_ES", "3");
+     //       envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
+     //   }
+			
         RendererPlugin.Renderer customRenderer = RendererPlugin.getSelectedRenderer();
         if (customRenderer != null && LOCAL_RENDERER.equals(customRenderer.getIdName())) {
             customRenderer.getEnv().forEach(envPair -> {
@@ -820,9 +820,15 @@ public class JREUtils {
                 case "opengles2_vgpu_1":
                     renderLibrary = "libvgpu_1368.so";
                     break;
+         //     case "opengles3_angle":
+           //         renderLibrary = "libAngle.so";
+          //          break;
+                case "opengles3_ltw":
+                    renderLibrary = "libltw.so";
+                    break;
                 case "opengles3_mges":
                     renderLibrary = "libmobileglues.so";
-                    break;
+		    break;
                 case "vulkan_zink":
                 case "gallium_freedreno":
                     renderLibrary = "libOSMesa_2304.so";
@@ -832,12 +838,6 @@ public class JREUtils {
                     break;
                 case "gallium_panfrost":
                     renderLibrary = "libOSMesa_2300d.so";
-                    break;
-                case "opengles3_angle":
-                    renderLibrary = "libAngle.so";
-                    break;
-                case "opengles3_ltw":
-                    renderLibrary = "libltw.so";
                     break;
                 default:
                     Log.w("RENDER_LIBRARY", "No renderer selected, defaulting to opengles2");
