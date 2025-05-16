@@ -349,6 +349,7 @@ public class LauncherPreferenceVideoFragment extends LauncherPreferenceFragment 
         multidrawModeOptions.add(getString(R.string.mg_option_multidraw_mode_basevertex));
         multidrawModeOptions.add(getString(R.string.mg_option_multidraw_mode_multidraw_indirect));
         multidrawModeOptions.add(getString(R.string.mg_option_multidraw_mode_drawelements));
+		multidrawModeOptions.add(getString(R.string.mg_option_multidraw_mode_compute));
         ArrayAdapter<String> multidrawModeAdapter = new ArrayAdapter<>(getContext(), R.layout.spinner, multidrawModeOptions);
         enableCompatibleMode.setAdapter(multidrawModeAdapter);
         enableCompatibleMode.setSelection(Integer.parseInt(LauncherPreferences.MG_MULTIDRAWMODE_OPTION));
