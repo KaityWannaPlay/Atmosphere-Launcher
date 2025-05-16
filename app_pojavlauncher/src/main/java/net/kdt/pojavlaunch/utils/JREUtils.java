@@ -278,10 +278,10 @@ public class JREUtils {
             envMap.put("POJAVEXEC_EGL", "libltw.so");
         }
 
-        if (LOCAL_RENDERER.equals("opengles3_angle")) {
-            envMap.put("LIBGL_ES", "3");
-            envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
-        }
+     //   if (LOCAL_RENDERER.equals("opengles3_angle")) {
+     //       envMap.put("LIBGL_ES", "3");
+     //       envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
+     //   }
 			
         if (LOCAL_RENDERER.equals("opengles3_mges")) {
             envMap.put("MG_DIR_PATH", Tools.DIR_CACHE.getAbsolutePath());
