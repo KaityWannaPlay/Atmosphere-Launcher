@@ -820,15 +820,15 @@ public class JREUtils {
                 case "opengles2_vgpu_1":
                     renderLibrary = "libvgpu_1368.so";
                     break;
-                case "opengles3_mges":
-                    renderLibrary = "libmobileglues.so";
-		    break;
          //     case "opengles3_angle":
            //         renderLibrary = "libAngle.so";
           //          break;
                 case "opengles3_ltw":
                     renderLibrary = "libltw.so";
                     break;
+                case "opengles3_mges":
+                    renderLibrary = "libmobileglues.so";
+		    break;
                 case "vulkan_zink":
                 case "gallium_freedreno":
                     renderLibrary = "libOSMesa_2304.so";
