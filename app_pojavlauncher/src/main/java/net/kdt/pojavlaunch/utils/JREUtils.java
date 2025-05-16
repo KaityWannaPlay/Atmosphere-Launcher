@@ -273,6 +273,16 @@ public class JREUtils {
             envMap.put("LIBGL_NORMALIZE", "1");
         }
 
+        if (LOCAL_RENDERER.equals("opengles3_mges")) {
+            envMap.put("MG_DIR_PATH", Tools.DIR_CACHE.getAbsolutePath());
+            envMap.put("MG_maxGlslCacheSize", MG_GLSL_CACHE_SIZE);
+            envMap.put("MG_enableANGLE", MG_ANGLE_OPTION);
+            envMap.put("MG_enableNoError", MG_NOERROR_OPTION);
+            envMap.put("MG_multidrawMode", MG_MULTIDRAWMODE_OPTION);
+            envMap.put("MG_enableExtGL43", MG_EXT_GL43);
+            envMap.put("MG_enableExtComputeShader", MG_EXT_CS);
+	}
+
         if (LOCAL_RENDERER.equals("opengles3_ltw")) {
             envMap.put("LIBGL_ES", "3");
             envMap.put("POJAVEXEC_EGL", "libltw.so");
@@ -283,16 +293,6 @@ public class JREUtils {
      //       envMap.put("POJAVEXEC_EGL", "libEGL_angle.so");
      //   }
 			
-        if (LOCAL_RENDERER.equals("opengles3_mges")) {
-            envMap.put("MG_DIR_PATH", Tools.DIR_CACHE.getAbsolutePath());
-            envMap.put("MG_maxGlslCacheSize", MG_GLSL_CACHE_SIZE);
-            envMap.put("MG_enableANGLE", MG_ANGLE_OPTION);
-            envMap.put("MG_enableNoError", MG_NOERROR_OPTION);
-            envMap.put("MG_multidrawMode", MG_MULTIDRAWMODE_OPTION);
-            envMap.put("MG_enableExtGL43", MG_EXT_GL43);
-            envMap.put("MG_enableExtComputeShader", MG_EXT_CS);
-        }
-
         RendererPlugin.Renderer customRenderer = RendererPlugin.getSelectedRenderer();
         if (customRenderer != null && LOCAL_RENDERER.equals(customRenderer.getIdName())) {
             customRenderer.getEnv().forEach(envPair -> {
