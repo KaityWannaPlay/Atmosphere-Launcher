@@ -827,7 +827,7 @@ public class JREUtils {
            //         renderLibrary = "libAngle.so";
           //          break;
                 case "opengles3_ltw":
-                    renderLibrary = "libltw.so"
+                    renderLibrary = "libltw.so";
                     break;
                 case "vulkan_zink":
                 case "gallium_freedreno":
