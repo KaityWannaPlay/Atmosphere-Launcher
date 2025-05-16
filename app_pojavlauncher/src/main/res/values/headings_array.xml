@@ -24,8 +24,8 @@
         <item>gallium_virgl</item> <!-- gallium_virgl with OpenGL ES 3 -->
         <item>gallium_freedreno</item> <!-- Gallium Freedreno with Adreno GPU -->
         <item>gallium_panfrost</item> <!-- Gallium Panfrost with Mali GPU -->
-        <item>opengles3_mges</item> <!-- Mobile GL 4.0 with OpenGL ES 3 -->
         <item>opengles3_ltw</item> <!-- Unknown -->
+        <item>opengles3_mges</item> <!-- Mobile GL 4.0 with OpenGL ES 3 -->
     </string-array>
 
     <string-array name="menu_customcontrol">
