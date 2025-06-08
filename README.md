@@ -1,4 +1,4 @@
-<H1 align="center">BlueSky</H1>
+<H1 align="center">Atmosphere Launcher</H1>
 
 [![Android CI](https://github.com/Vera-Firefly/Pojav-Glow-Worm/actions/workflows/main.yml/badge.svg)](https://github.com/Vera-Firefly/Pojav-Glow-Worm/actions)
 ![Downloads](https://img.shields.io/github/downloads/Vera-Firefly/Pojav-Glow-Worm/total)
