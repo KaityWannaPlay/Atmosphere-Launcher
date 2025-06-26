@@ -177,7 +177,7 @@ android {
             }
         }
         def beseVersionName = getDate().toString()
-        def baseName = "BlueSky-Launcher${variant.buildType.name == 'release' ? beseVersionName : "Debug-${beseVersionName}"}"
+        def baseName = "Atmosphere-Launcher${variant.buildType.name == 'release' ? beseVersionName : "Debug-${beseVersionName}"}"
         outputFileName = "${baseName}-${abi}.apk"
         }
     }
