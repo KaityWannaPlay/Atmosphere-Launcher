@@ -39,8 +39,8 @@ import okhttp3.Response;
 
 public class UpdateLauncher {
 
-    private static final String GITHUB_API = "https://api.github.com/repos/Vera-Firefly/Pojav-Glow-Worm/releases/latest";
-    private static final String GITHUB_RELEASE_URL = "github.com/Vera-Firefly/Pojav-Glow-Worm/releases/download/%s/Pojav-Glow-Worm-%s-%s.apk";
+    private static final String GITHUB_API = "https://api.github.com/repos/WesleyVanNeck/Atmosphere-Launcher/releases/latest";
+    private static final String GITHUB_RELEASE_URL = "github.com/WesleyVanNeck/Atmosphere-Launcher/releases/download/%s/Atmosphere-Launcher-%s-%s.apk";
     private static final String CACHE_APK_NAME = "cache.apk";
     private static final String APK_VERSION_FILE_NAME = "apk_version";
     private static final String IGNORE_VERSION_FILE_NAME = "ignore_version";
