@@ -22,9 +22,19 @@ include $(BUILD_SHARED_LIBRARY)
 
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := OSMesaInfo
+LOCAL_SRC_FILES := mesainfo/mesa_info.cpp
+LOCAL_CPP_FEATURES := rtti exceptions
+LOCAL_CPPFLAGS := -std=c++11 -Wall -Werror
+LOCAL_LDLIBS := -ldl -llog
+LOCAL_CFLAGS := -D__ANDROID__ -DLOG_INFO
+include $(BUILD_SHARED_LIBRARY)
+
+
+include $(CLEAR_VARS)
 LOCAL_LDLIBS := -ldl -llog -landroid
 LOCAL_MODULE := bridge_config
-LOCAL_SHARED_LIBRARIES := br_common
+LOCAL_SHARED_LIBRARIES := br_common OSMesaInfo
 LOCAL_CFLAGS += -g -rdynamic
 
 LOCAL_SRC_FILES := \
@@ -46,6 +56,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_LDLIBS := -ldl -llog -landroid
 LOCAL_MODULE := driver_helper
+LOCAL_SHARED_LIBRARIES := OSMesaInfo
 LOCAL_SRC_FILES := \
     driver_helper/driver_helper.c \
     driver_helper/nsbypass.c
